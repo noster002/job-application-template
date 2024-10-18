@@ -1,0 +1,43 @@
+* {
+	box-sizing: border-box;
+}
+
+.pdf {
+	background-color: lightgrey;
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto;
+}
+
+.page {
+	background-color: white;
+	color: black;
+}
+
+.page--size-a4 {
+	display: inline-block;
+	position: relative;
+	height: 297mm;
+	width: 210mm;
+	margin: 2em auto;
+	padding: 3em;
+	overflow: visible;
+	height: auto !important;
+}
+
+.content {
+	position: relative;
+}
+
+@media print {
+	.page {
+		background-color: black;
+		color: lightblue;
+		margin: 0;
+	}
+}
+
+@page {
+	size: A4 portrait;
+	margin: 2em;
+}
