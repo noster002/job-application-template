@@ -35,9 +35,12 @@
         margin-top: 10mm;
     }
 
-    .pagedjs_first_page {
+
+    /* uncomment for first page on right side */
+
+    /* .pagedjs_first_page {
         margin-left: var(--pagedjs-width);
-    }
+    }  */
 
     .pagedjs_page:last-of-type {
         margin-bottom: 10mm;

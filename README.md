@@ -5,4 +5,4 @@ html document to keep my CV up-to-date
 pagedjs.org
 
 ### open server
-npx http-server ./css -p 4242 --cors
+npx http-server ./ -p 4242
