@@ -1,4 +1,18 @@
 @page {
 	size: A4 portrait;
-	margin: 2cm;
+	margin: 1cm;
+}
+
+@font-face {
+	font-family: "Jost";
+	font-style: normal;
+	font-weight: 600;
+	src: url(/fonts/jost/Jost-VariableFont_wght.ttf) format("truetype");
+}
+
+.headline {
+	font-family: "Jost";
+	font-size: 2em;
+	text-align: center;
+	margin: 1em;
 }
