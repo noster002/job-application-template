@@ -3,6 +3,28 @@
 	margin: 1cm;
 }
 
+.pagedjs_page {
+	--pagedjs-content-height: calc(var(--pagedjs-pagebox-height) - var(--pagedjs-margin-top) - var(--pagedjs-margin-bottom));
+	--pagedjs-content-width: calc(var(--pagedjs-pagebox-width) - var(--pagedjs-margin-left) - var(--pagedjs-margin-right));
+
+	.headline {
+		height: calc(var(--pagedjs-content-height) * 0.1);
+		background-color: lightblue;
+		padding: 5% 0;
+	}
+
+	.profile {
+		height: calc(var(--pagedjs-content-height) * 0.3);
+		background-color: lightgrey;
+		padding: 2cm;
+	}
+	
+	.projects {
+		height: calc(var(--pagedjs-content-height) * 0.6);
+		background-color: lightgreen;
+	}
+}
+
 @font-face {
 	font-family: "Jost";
 	font-style: normal;
@@ -14,5 +36,5 @@
 	font-family: "Jost";
 	font-size: 2em;
 	text-align: center;
-	margin: 1em;
 }
+
