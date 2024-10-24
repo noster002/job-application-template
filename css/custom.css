@@ -4,37 +4,79 @@
 }
 
 .pagedjs_page {
-	--pagedjs-content-height: calc(var(--pagedjs-pagebox-height) - var(--pagedjs-margin-top) - var(--pagedjs-margin-bottom));
-	--pagedjs-content-width: calc(var(--pagedjs-pagebox-width) - var(--pagedjs-margin-left) - var(--pagedjs-margin-right));
+	--page-content-height: calc(var(--pagedjs-pagebox-height) - var(--pagedjs-margin-top) - var(--pagedjs-margin-bottom));
+	--page-content-width: calc(var(--pagedjs-pagebox-width) - var(--pagedjs-margin-left) - var(--pagedjs-margin-right));
+	--headline-height: calc(var(--page-content-height) * 0.1);
+	--profile-height: calc((var(--page-content-height) - var(--headline-height)) * 0.2);
+	--profile-picture-width: var(--profile-height);
+	--projects-height: calc(var(--page-content-height) - var(--headline-height) - var(--profile-height));
+}
 
-	.headline {
-		height: calc(var(--pagedjs-content-height) * 0.1);
-		background-color: lightblue;
-		padding: 5% 0;
-	}
+.pagedjs_page .headline {
+	height: var(--headline-height);
+	background-color: lightblue;
+}
 
-	.profile {
-		height: calc(var(--pagedjs-content-height) * 0.3);
-		background-color: lightgrey;
-		padding: 2cm;
-	}
-	
-	.projects {
-		height: calc(var(--pagedjs-content-height) * 0.6);
-		background-color: lightgreen;
-	}
+.pagedjs_page .headline .cv {
+	font-family: "Jost";
+	line-height: calc(var(--headline-height) * 0.3);
+	font-size: calc(var(--headline-height) * 0.3);
+	text-align: center;
+}
+
+.pagedjs_page .headline .name {
+	font-family: "Jost";
+	line-height: calc(var(--headline-height) * 0.5);
+	font-size: calc(var(--headline-height) * 0.5);
+	text-align: center;
+}
+
+.pagedjs_page .headline .job-title {
+	font-family: "Jost";
+	line-height: calc(var(--headline-height) * 0.2);
+	font-size: calc(var(--headline-height) * 0.2);
+	text-align: center;
+}
+
+.pagedjs_page .profile {
+	display: flex;
+	height: var(--profile-height);
+	background-color: lightgrey;
+}
+
+.pagedjs_page .text-container {
+	width: calc(var(--page-content-width) - var(--profile-picture-width));
+}
+
+.pagedjs_page .profile .text-container .name {
+	display: none;
+}
+
+.pagedjs_page .profile .text-container .github {
+}
+
+.pagedjs_page .profile .picture-container {
+	height: var(--profile-height);
+	aspect-ratio: 1 / 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.pagedjs_page .profile .picture-container img {
+	height: calc(var(--profile-height) * 0.7);
+	object-fit: cover;
+	border-radius: 50%;
+}
+
+.pagedjs_page .projects {
+	height: var(--projects-height);
+	background-color: lightgreen;
 }
 
 @font-face {
 	font-family: "Jost";
 	font-style: normal;
-	font-weight: 600;
+	font-weight: 300;
 	src: url(/fonts/jost/Jost-VariableFont_wght.ttf) format("truetype");
 }
-
-.headline {
-	font-family: "Jost";
-	font-size: 2em;
-	text-align: center;
-}
-
