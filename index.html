@@ -8,50 +8,122 @@
 	</head>
 	<body>
 		<div class="headline">
-			<div class="cv">curriculum vitae</div>
-			<div class="name">Nils Ostermeier</div>
-			<div class="job-title">Software Developer</div>
+			<div class="cv header">curriculum vitae</div>
+			<div class="name header">Nils Ostermeier</div>
+			<div class="job-title header">Software Developer</div>
 		</div>
-		<div class="contact">
-			<div class="header">contact</div>
-			<div class="phone">+49 111 222 333</div>
-			<div class="email">email@my.com</div>
-			<div class="github">github.com/link</div>
-			<div class="address">city, country</div>
+		<div class="profile base-container">
+			<p>I'm a 42 student with three years of experience in software development and problem solving.<br>
+			My experience includes working on a variety of different projects in C and C++,
+			developing and dockerizing a web app, writing both backend and frontend, and setting up
+			and working in different Linux environments.<br>
+			Furthermore I have expertise in peer reviews and learning.</p>
 		</div>
-		<div class="profile">
-			<div class="header">profile</div>
-			<p>
-			I'm a 42 student with three years of experience in software development and problem solving.
-			My experience includes working on many diverse projects in C and C++, developing and dockerizing a web app writing both backend and frontend, and setting up and working in different Linux environments. Furthermore I have expertise in peer reviews and learning.
-			</p>
+		<div class="row">
+		<div class="column left">
+		<div class="contact base-container">
+			<h2 class="header">contact</h2>
+			<ul>
+				<li class="phone">+00 111 222 333</li>
+				<li class="email">email@my.com</li>
+				<li class="github">github.com/link</li>
+				<li class="address">city, country</li>
+			</ul>
 		</div>
-		<div class="education">
-			<div class="header">education</div>
-			<div class="time-span">2021 - Present</div>
-			<div class="school">42 Wolfsburg</div>
-			<div class="goal">Software Engineering</div>
-			<div class="time-span">2017 - 2019</div>
-			<div class="school">Gymnasium Trittau</div>
-			<div class="goal">Abitur</div>
+		<div class="education base-container">
+			<h2 class="header">education</h2>
+				<ul>
+				<li>
+					<div class="time-span">2021 - Present</div>
+					<div class="school">42 Wolfsburg</div>
+					<div class="goal">Software Engineering</div>
+				</li>
+				<li>
+					<div class="time-span">2017 - 2019</div>
+					<div class="school">Gymnasium Trittau</div>
+					<div class="goal">Abitur</div>
+				</li>
+			</ul>
 		</div>
-		<div class="skills">
-			<div class="header">skills</div>
-			<div class="skill">C</div>
-			<div class="skill">C++</div>
-			<div class="skill">Linux, Bash</div>
-			<div class="skill">Git</div>
-			<div class="skill">Make</div>
-			<div class="skill">Assembly</div>
-			<div class="skill">Docker, Docker Compose</div>
-			<div class="skill">TypeScript</div>
-			<div class="skill">NestJS, PostgreSQL</div>
-			<div class="skill">React, Next.js</div>
-			<div class="skill">nginx</div>
+		<div class="skills base-container">
+			<h2 class="header">skills</h2>
+			<ul>
+				<li>C</li>
+				<li>C++</li>
+				<li>Linux, Bash</li>
+				<li>Git</li>
+				<li>Make</li>
+				<li>Assembly</li>
+				<li>Docker, Docker Compose</li>
+				<li>TypeScript</li>
+				<li>NestJS, PostgreSQL</li>
+				<li>React, Next.js</li>
+				<li>nginx</li>
+			</ul>
 		</div>
-		<div class="projects">
-			<div class="header">projects</div>
-			<div class="project">project1</div>
+		<div class="languages base-container">
+			<h2 class="header">languages</h2>
+			<ul>
+				<li>German - native</li>
+				<li>English - fluent</li>
+			</ul>
+		</div>
+		</div>
+		<div class="column right">
+		<div class="projects base-container">
+			<h2 class="header">projects</h2>
+			<div class="project">
+				<h3>ft_containers</h3>
+				<ul>
+					<li>Recoded C++98 standard library containers from scratch</li>
+					<ul>
+						<li>vector (without vector<bool> specification)</li>
+						<li>stack (based on my vector</li>
+						<li>map (based on my red black tree)</li>
+						<li>set (based on my red black tree)</li>
+					</ul>
+					<li>Implemented various features from different standard library headers (mostly C++98)</li>
+				</ul>
+			</div>
+			<div class="project">
+				<h3>webserv</h3>
+				<ul>
+					<li>Developed an HTTP webserver in C++98</li>
+					<ul>
+						<li>HTTP/1.1 is implemented to a certain extend as in RFC9110</li>
+						<li>GET, POST, PUT, DELETE methods</li>
+						<li>CGI implementation</li>
+					</ul>
+					<li>Implemented configuration file parser oriented towards nginx</li>
+				</ul>
+			</div>
+			<div class="project">
+				<h3>ft_transcendence</h3>
+				<ul>
+					<li>Developed a full stack web application set up in docker-compose with a webserver(nginx), a frontend(Next.js, Typescript), a backend(NestJS, Typescript) and a database(postgreSQL)</li>
+					<ul>
+						<li>Pong game (multiplayer server side game)</li>
+						<li>user management</li>
+						<ul>
+							<li>login system using OAuth API of 42 school</li>
+							<li>2FA possibilities</li>
+							<li>customizable profile</li>
+							<li>friend list and blocking list management</li>
+						</ul>
+						<li>real-time chat</li>
+						<ul>
+							<li>direct messages</li>
+							<li>group chats</li>
+							<ul>
+								<li>administration rights</li>
+								<li>sanction policies</li>
+							</ul>
+						</ul>
+					</ul>
+				</ul>
+			</div>
+		</div>
+		</div>
 		</div>
 	</body>
 </html>
