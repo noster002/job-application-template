@@ -32,7 +32,7 @@
 		</div>
 		<div class="education base-container">
 			<h2 class="header">education</h2>
-				<ul>
+			<ul>
 				<li>
 					<div class="time-span">2021 - Present</div>
 					<div class="school">42 Wolfsburg</div>
@@ -50,15 +50,15 @@
 			<ul>
 				<li>C</li>
 				<li>C++</li>
-				<li>Linux, Bash</li>
+				<li class="prompt">Linux, Bash</li>
 				<li>Git</li>
 				<li>Make</li>
-				<li>Assembly</li>
 				<li>Docker, Docker Compose</li>
+				<li>nginx</li>
 				<li>TypeScript</li>
 				<li>NestJS, PostgreSQL</li>
 				<li>React, Next.js</li>
-				<li>nginx</li>
+				<li>Assembly</li>
 			</ul>
 		</div>
 		<div class="languages base-container">
@@ -77,8 +77,8 @@
 				<ul>
 					<li>Recoded C++98 standard library containers from scratch</li>
 					<ul>
-						<li>vector (without vector<bool> specification)</li>
-						<li>stack (based on my vector</li>
+						<li>vector (without vector&lt;bool&gt; specification)</li>
+						<li>stack (based on my vector)</li>
 						<li>map (based on my red black tree)</li>
 						<li>set (based on my red black tree)</li>
 					</ul>
@@ -90,7 +90,7 @@
 				<ul>
 					<li>Developed an HTTP webserver in C++98</li>
 					<ul>
-						<li>HTTP/1.1 is implemented to a certain extend as in RFC9110</li>
+						<li>HTTP/1.1 (implemented to a certain extend as in RFC9110)</li>
 						<li>GET, POST, PUT, DELETE methods</li>
 						<li>CGI implementation</li>
 					</ul>
@@ -100,26 +100,23 @@
 			<div class="project">
 				<h3>ft_transcendence</h3>
 				<ul>
-					<li>Developed a full stack web application set up in docker-compose with a webserver(nginx), a frontend(Next.js, Typescript), a backend(NestJS, Typescript) and a database(postgreSQL)</li>
+					<li>Set up docker-compose for a full stack web application
+					(webserver [nginx], frontend [Next.js, Typescript],
+					backend [NestJS, Typescript], database [postgreSQL])</li>
+					<li>Developed login and user management in backend</li>
 					<ul>
-						<li>Pong game (multiplayer server side game)</li>
-						<li>user management</li>
-						<ul>
-							<li>login system using OAuth API of 42 school</li>
-							<li>2FA possibilities</li>
-							<li>customizable profile</li>
-							<li>friend list and blocking list management</li>
-						</ul>
-						<li>real-time chat</li>
-						<ul>
-							<li>direct messages</li>
-							<li>group chats</li>
-							<ul>
-								<li>administration rights</li>
-								<li>sanction policies</li>
-							</ul>
-						</ul>
+						<li>login system using OAuth API of 42 school</li>
+						<li>2FA possibilities with Google Authenticator</li>
+						<li>customizable profile (username, profile picture)</li>
 					</ul>
+					<li>Handled user interactions in backend</li>
+					<ul>
+						<li>search users, add/remove friends, block/unblock users</li>
+						<li>real-time chat (direct messages and group chat)</li>
+						<li>administration rights and sanction policies for group chat</li>
+					</ul>
+					<li>Developed game logic in backend (multiplayer real time server side game [Pong])</li>
+					<li>Created frontend logic and integrated backend API (no CSS done)</li>
 				</ul>
 			</div>
 		</div>

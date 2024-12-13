@@ -11,30 +11,26 @@
 }
 
 .pagedjs_page .headline {
-	height: var(--headline-height);
 	text-align: center;
 }
 
 .pagedjs_page .headline .cv {
-	line-height: calc(var(--headline-height) * 0.3);
-	font-size: calc(var(--headline-height) * 0.3);
+	font-size: 2em;
 }
 
 .pagedjs_page .headline .name {
-	line-height: calc(var(--headline-height) * 0.5);
-	font-size: calc(var(--headline-height) * 0.5);
+	font-size: 3.5em;
+	line-height: 0.7em;
 }
 
 .pagedjs_page .headline .job-title {
-	line-height: calc(var(--headline-height) * 0.2);
-	font-size: calc(var(--headline-height) * 0.2);
+	font-size: 1.5em;
 }
 
 .pagedjs_page .header {
 	font-family: "Jost";
 	font-size: 1.5em;
-	font-weight: bold;
-	color: dimgrey;
+	color: grey;
 	margin: 0;
 }
 
@@ -42,6 +38,14 @@
 	margin: 1em 0;
 	font-family: "Space Grotesk";
 	font-size: 0.95rem;
+}
+
+.pagedjs_page .left .base-container {
+	margin-bottom: 3em;
+}
+
+.pagedjs_page .right .base-container {
+	margin-left: 1em;
 }
 
 .pagedjs_page .column {
@@ -53,6 +57,7 @@
 }
 
 .pagedjs_page .right {
+	position: relative;
 	width: calc(var(--page-content-width) - var(--page-split));
 }
 
@@ -62,14 +67,15 @@
 	clear: both;
 }
 
-.pagedjs_page .contact ul {
-	list-style-type: none;
+.pagedjs_page .left ul {
+	padding-left: 2em;
 }
 
 .pagedjs_page .contact li {
 	position: relative;
-	--line-height: 1.3em;
-	line-height: var(--line-height);
+	list-style-type: none;
+	display: flex;
+	align-items: center;
 }
 
 .pagedjs_page .contact li::before {
@@ -77,8 +83,8 @@
 	position: absolute;
 	left: -2em;
 	display: inline-block;
-	width: var(--line-height);
-	height: var(--line-height);
+	width: 1.2em;
+	height: 1.2em;
 	background-size: cover;
 }
 
@@ -98,44 +104,62 @@
 	background-image: url('/images/location.svg');
 }
 
-.pagedjs_page .profile {
+.pagedjs_page .left .education ul {
+	list-style-type: none;
+	padding-left: 0;
+}
+
+.pagedjs_page .education .school {
+	font-weight: bold;
+	font-size: 1.1em;
+}
+
+.pagedjs_page .skills .prompt {
+	position: relative;
+	list-style-type: none;
 	display: flex;
-	height: var(--profile-height);
-}
-
-.pagedjs_page .text-container {
-	width: calc(var(--page-content-width) - var(--profile-picture-width));
-}
-
-.pagedjs_page .profile .text-container .name {
-	display: none;
-}
-
-.pagedjs_page .profile .text-container .github {
-}
-
-.pagedjs_page .profile .picture-container {
-	height: var(--profile-height);
-	aspect-ratio: 1 / 1;
-	display: flex;
-	justify-content: center;
 	align-items: center;
 }
 
-.pagedjs_page .profile .picture-container img {
-	height: calc(var(--profile-height) * 0.7);
-	object-fit: cover;
-	border-radius: 50%;
+.pagedjs_page .skills li.prompt::before {
+	content: '';
+	position: absolute;
+	top: 0.1em;
+	left: -1.2em;
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	background-image: url('/images/prompt.svg');
+	background-size: cover;
 }
 
-.pagedjs_page .projects {
-	height: var(--projects-height);
+.pagedjs_page .right ul {
+	padding-left: 1em;
+}
+
+.pagedjs_page .right li {
+	position: relative;
+	list-style-type: none;
+	display: flex;
+	align-items: center;
+}
+
+.pagedjs_page .right li::before {
+	content: '';
+	position: absolute;
+	top: 0.1em;
+	left: -1em;
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	background-image: url('/images/arrow.svg');
+	background-size: cover;
 }
 
 @font-face {
 	font-family: "Jost";
 	font-style: normal;
-	font-weight: 300;
+	font-weight: 400;
 	src: url(/fonts/jost/Jost-VariableFont_wght.ttf) format("truetype");
 }
 
