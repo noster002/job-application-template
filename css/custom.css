@@ -12,23 +12,21 @@
 
 .pagedjs_page .headline {
 	text-align: center;
-}
-
-.pagedjs_page .headline .cv {
-	font-size: 2em;
+	margin: 1em 0;
 }
 
 .pagedjs_page .headline .name {
-	font-size: 3.5em;
-	line-height: 0.7em;
+	font-size: 3em;
 }
 
 .pagedjs_page .headline .job-title {
-	font-size: 1.5em;
+	font-size: 2em;
+	font-weight: 300;
 }
 
 .pagedjs_page .header {
-	font-family: "Jost";
+	font-family: "Space Grotesk";
+	font-weight: 500;
 	font-size: 1.5em;
 	color: grey;
 	margin: 0;
@@ -36,8 +34,8 @@
 
 .pagedjs_page .base-container {
 	margin: 1em 0;
-	font-family: "Space Grotesk";
-	font-size: 0.95rem;
+	font-family: "Jost";
+	font-weight: 250;
 }
 
 .pagedjs_page .left .base-container {
@@ -83,8 +81,8 @@
 	position: absolute;
 	left: -2em;
 	display: inline-block;
-	width: 1.2em;
-	height: 1.2em;
+	width: 1em;
+	height: 1em;
 	background-size: cover;
 }
 
@@ -159,13 +157,11 @@
 @font-face {
 	font-family: "Jost";
 	font-style: normal;
-	font-weight: 400;
 	src: url(/fonts/jost/Jost-VariableFont_wght.ttf) format("truetype");
 }
 
 @font-face {
 	font-family: "Space Grotesk";
 	font-style: normal;
-	font-weight: 300;
 	src: url(/fonts/space-grotesk/SpaceGrotesk-VariableFont_wght.ttf) format("truetype");
 }
