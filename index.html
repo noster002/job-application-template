@@ -8,8 +8,8 @@
 	</head>
 	<body>
 		<div class="headline">
-			<div class="name header">Nils Ostermeier</div>
-			<div class="job-title header">Software Developer</div>
+			<h1 class="name header">Nils Ostermeier</h1>
+			<h2 class="job-title header">Software Developer</h2>
 		</div>
 		<div class="profile base-container">
 			<p>I'm a 42 student with three years of experience in software development and problem solving.<br>
@@ -21,48 +21,47 @@
 		<div class="row">
 		<div class="column left">
 		<div class="contact base-container">
-			<h2 class="header">contact</h2>
-			<ul>
-				<li class="phone">+00 111 222 333</li>
-				<li class="email">email@my.com</li>
-				<li class="github">github.com/link</li>
-				<li class="address">city, country</li>
+			<h3 class="header">contact</h3>
+			<ul class="icon--far">
+				<li class="icon--phone">+00 111 222 333</li>
+				<li class="icon--email">email@my.com</li>
+				<li class="icon--github">github.com/link</li>
+				<li class="icon--address">city, country</li>
 			</ul>
 		</div>
 		<div class="education base-container">
-			<h2 class="header">education</h2>
-			<ul>
-				<li>
-					<div class="time-span">2021 - Present</div>
-					<div class="school">42 Wolfsburg</div>
+			<h3 class="header">education</h3>
+			<ul class="icon--far">
+				<li class="icon--calendar">
+					<div class="h5-wrapper"><h5>2021 - Present</h5></div>
+					<h4 class="school">42 Wolfsburg</h4>
 					<div class="goal">Software Engineering</div>
 				</li>
-				<li>
-					<div class="time-span">2017 - 2019</div>
-					<div class="school">Gymnasium Trittau</div>
+				<li class="icon--calendar">
+					<div class="h5-wrapper"><h5>2017 - 2019</h5></div>
+					<h4 class="school">Gymnasium Trittau</h4>
 					<div class="goal">Abitur</div>
 				</li>
 			</ul>
 		</div>
 		<div class="skills base-container">
-			<h2 class="header">skills</h2>
-			<ul>
+			<h3 class="header">skills</h3>
+			<ul class="icon--far">
 				<li>C</li>
 				<li>C++</li>
-				<li class="prompt">Linux, Bash</li>
+				<li class="icon--prompt">Linux, Bash</li>
 				<li>Git</li>
 				<li>Make</li>
 				<li>Docker, Docker Compose</li>
 				<li>nginx</li>
 				<li>TypeScript</li>
-				<li>NestJS, PostgreSQL</li>
-				<li>React, Next.js</li>
+				<li>NestJS, Next.js, React</li>
 				<li>Assembly</li>
 			</ul>
 		</div>
 		<div class="languages base-container">
-			<h2 class="header">languages</h2>
-			<ul>
+			<h3 class="header">languages</h3>
+			<ul class="icon--far">
 				<li>German - native</li>
 				<li>English - fluent</li>
 			</ul>
@@ -70,52 +69,67 @@
 		</div>
 		<div class="column right">
 		<div class="projects base-container">
-			<h2 class="header">projects</h2>
+			<h3 class="header">projects</h3>
 			<div class="project">
-				<h3>ft_containers</h3>
-				<ul>
-					<li>Recoded C++98 standard library containers from scratch</li>
-					<ul>
-						<li>vector (without vector&lt;bool&gt; specification)</li>
-						<li>stack (based on my vector)</li>
-						<li>map (based on my red black tree)</li>
-						<li>set (based on my red black tree)</li>
-					</ul>
-					<li>Implemented various features from different standard library headers (mostly C++98)</li>
+				<div class="head">
+					<h4 class="name">ft_containers</h4>
+					<div class="h5-wrapper right-align">
+						<h5 class="icon--close icon--team team">solo</h5>
+						<h5 class="icon--close icon--time time">three months</h5>
+					</div>
+				</div>
+				<p class="description">Implement various C++98 standard library features linked to containers</p>
+				<ul class="icon--far">
+					<li>Developed small features
+					(enable_if, equal, pair, reverse_iterator, etc.)</li>
+					<li>Recoded std::vector (without vector&lt;bool&gt; specification) and<br>
+					std::stack (based on my vector)</li>
+					<li>Created my own red-black tree and used it<br>
+					to implement my versions of std::map and std::set</li>
 				</ul>
 			</div>
 			<div class="project">
-				<h3>webserv</h3>
-				<ul>
-					<li>Developed an HTTP webserver in C++98</li>
-					<ul>
-						<li>HTTP/1.1 (implemented to a certain extend as in RFC9110)</li>
-						<li>GET, POST, PUT, DELETE methods</li>
-						<li>CGI implementation</li>
-					</ul>
-					<li>Implemented configuration file parser oriented towards nginx</li>
-				</ul>
+				<div class="head">
+					<h4 class="name">webserv</h4>
+					<div class="h5-wrapper right-align">
+						<h5 class="icon--close icon--team team">team of two</h5>
+						<h5 class="icon--close icon--time time">three months</h5>
+					</div>
+				</div>
+				<p class="description">Develop an HTTP webserver in C++98</p>
+				<ul class="icon--far">
+					<li>Created asynchronous server structure</li>
+					<li>Implemented HTTP/1.1 parser (to a certain extend as in RFC9110)</li>
+					<li>Defined configuration file logic (oriented towards nginx)</li>
+					<li>Handled uploads and CGI</li>
 			</div>
 			<div class="project">
-				<h3>ft_transcendence</h3>
-				<ul>
-					<li>Set up docker-compose for a full stack web application
-					(webserver [nginx], frontend [Next.js, Typescript],
-					backend [NestJS, Typescript], database [postgreSQL])</li>
+				<div class="head">
+					<h4 class="name">ft_transcendence</h4>
+					<div class="h5-wrapper right-align">
+						<h5 class="icon--close icon--team team">team of four</h5>
+						<h5 class="icon--close icon--time time">three months</h5>
+					</div>
+				</div>
+				<p class="description">Create a full-stack web application written in Typescript hosted with Docker including a multiplayer game, real-time chat, user profiles and more</p>
+				<ul class="icon--far">
+					<li>Set up docker-compose for development and production<br>
+					connecting multiple services (webserver [nginx], frontend [Next.js],
+					backend [NestJS], database [postgreSQL])</li>
 					<li>Developed login and user management in backend</li>
-					<ul>
+					<ul class="icon--far">
 						<li>login system using OAuth API of 42 school</li>
 						<li>2FA possibilities with Google Authenticator</li>
 						<li>customizable profile (username, profile picture)</li>
 					</ul>
 					<li>Handled user interactions in backend</li>
-					<ul>
+					<ul class="icon--far">
 						<li>search users, add/remove friends, block/unblock users</li>
-						<li>real-time chat (direct messages and group chat)</li>
-						<li>administration rights and sanction policies for group chat</li>
+						<li>direct messages</li>
+						<li>group chat with administration rights and sanction policies</li>
 					</ul>
-					<li>Developed game logic in backend (multiplayer real time server side game [Pong])</li>
-					<li>Created frontend logic and integrated backend API (no CSS done)</li>
+					<li>Built the game in backend (real-time server side game [Pong])</li>
+					<li>Created frontend logic and integrated backend API</li>
 				</ul>
 			</div>
 		</div>

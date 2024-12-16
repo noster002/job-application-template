@@ -15,35 +15,53 @@
 	margin: 1em 0;
 }
 
-.pagedjs_page .headline .name {
-	font-size: 3em;
+h1 {
+	font-size: 2.4em;
 }
 
-.pagedjs_page .headline .job-title {
-	font-size: 2em;
+h2 {
+	font-size: 1.6em;
+}
+
+h3 {
+	font-size: 1.2em;
+}
+
+h4 {
+	font-size: 1em;
+}
+
+h5 {
+	font-size: 0.8em;
+}
+
+h1, h2, h3 {
+	font-family: "Space Grotesk";
+	color: grey;
+}
+
+h1, h3, h4 {
+	font-weight: 500;
+}
+
+h2 {
 	font-weight: 300;
 }
 
-.pagedjs_page .header {
-	font-family: "Space Grotesk";
-	font-weight: 500;
-	font-size: 1.5em;
-	color: grey;
+h5 {
+	font-weight: 400;
+}
+
+h1, h2, h3, h4, h5 {
 	margin: 0;
 }
 
 .pagedjs_page .base-container {
-	margin: 1em 0;
+	margin: 0;
+	margin-bottom: 2em;
 	font-family: "Jost";
 	font-weight: 250;
-}
-
-.pagedjs_page .left .base-container {
-	margin-bottom: 3em;
-}
-
-.pagedjs_page .right .base-container {
-	margin-left: 1em;
+	font-size: 1em;
 }
 
 .pagedjs_page .column {
@@ -51,12 +69,13 @@
 }
 
 .pagedjs_page .left {
-	width: var(--page-split);
+	width: 30%;
 }
 
 .pagedjs_page .right {
 	position: relative;
-	width: calc(var(--page-content-width) - var(--page-split));
+	width: 68%;
+	margin-left: 2%;
 }
 
 .pagedjs_page .row::after {
@@ -69,87 +88,143 @@
 	padding-left: 2em;
 }
 
-.pagedjs_page .contact li {
+.pagedjs_page .left .education li {
+	margin-bottom: 1em;
+}
+
+.education .time-span {
+	position: relative;
+}
+
+ul.icon--close > li, ul.icon--far > li {
 	position: relative;
 	list-style-type: none;
+}
+
+ul.icon--close > li::before, ul.icon--far > li::before {
+	content: '';
+	position: absolute;
+	top: calc((1lh - 1rem) * 0.5);
+	display: inline-block;
+	width: 1rem;
+	height: 1rem;
+	background-image: url('/images/arrow.svg');
+	background-size: cover;
+}
+
+ul.icon--close > li::before {
+	left: -1.2rem;
+}
+
+ul.icon--far > li::before {
+	left: -2rem;
+}
+
+.pagedjs_page .projects .head {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin-top: 1em;
+}
+
+.right-align {
+	margin-right: 0;
+	margin-left: auto;
+}
+
+.h5-wrapper {
+	height: 1lh;
 	display: flex;
 	align-items: center;
 }
 
-.pagedjs_page .contact li::before {
+.icon--close, .icon--far {
+	position: relative;
+}
+
+.icon--close::before, .icon--far::before {
 	content: '';
 	position: absolute;
-	left: -2em;
+	top: calc((1lh - 1rem) * 0.5);
 	display: inline-block;
-	width: 1em;
-	height: 1em;
+	width: 1rem;
+	height: 1rem;
 	background-size: cover;
 }
 
-.pagedjs_page .contact li.phone::before {
+.icon--close::before {
+	left: -1.2rem;
+}
+
+.icon--far::before {
+	left: -2rem;
+}
+
+ul > li.icon--phone::before {
 	background-image: url('/images/phone.svg');
 }
 
-.pagedjs_page .contact li.email::before {
+ul > li.icon--email::before {
 	background-image: url('/images/mail.svg');
 }
 
-.pagedjs_page .contact li.github::before {
+ul > li.icon--github::before {
 	background-image: url('/images/github.svg');
 }
 
-.pagedjs_page .contact li.address::before {
+ul > li.icon--address::before {
 	background-image: url('/images/location.svg');
 }
 
-.pagedjs_page .left .education ul {
-	list-style-type: none;
-	padding-left: 0;
+ul > li.icon--calendar::before {
+	background-image: url('/images/calendar.svg');
 }
 
-.pagedjs_page .education .school {
-	font-weight: bold;
-	font-size: 1.1em;
+.icon--arrow::before {
+	background-image: url('/images/arrow.svg');
 }
 
-.pagedjs_page .skills .prompt {
-	position: relative;
-	list-style-type: none;
-	display: flex;
-	align-items: center;
-}
-
-.pagedjs_page .skills li.prompt::before {
-	content: '';
-	position: absolute;
-	top: 0.1em;
-	left: -1.2em;
-	display: inline-block;
-	width: 1em;
-	height: 1em;
+ul > li.icon--prompt::before {
 	background-image: url('/images/prompt.svg');
-	background-size: cover;
 }
 
-.pagedjs_page .right ul {
-	padding-left: 1em;
+.icon--team::before {
+	background-image: url('/images/team.svg');
 }
 
-.pagedjs_page .right li {
+.icon--time::before {
+	background-image: url('/images/time.svg');
+}
+
+.projects .head .time {
+	margin-left: 2rem;
+}
+
+.projects .head .team {
+	margin-left: 2rem;
+}
+
+.pagedjs_page .projects .description {
+	margin-top: 0;
+}
+
+.right ul {
+	padding-left: 2em;
+}
+
+li {
 	position: relative;
 	list-style-type: none;
-	display: flex;
-	align-items: center;
 }
 
-.pagedjs_page .right li::before {
+li::before {
 	content: '';
 	position: absolute;
-	top: 0.1em;
-	left: -1em;
+	top: calc((1lh - 1rem) * 0.5);
+	left: -1.2rem;
 	display: inline-block;
-	width: 1em;
-	height: 1em;
+	width: 1rem;
+	height: 1rem;
 	background-image: url('/images/arrow.svg');
 	background-size: cover;
 }
