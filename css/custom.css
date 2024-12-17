@@ -1,38 +1,28 @@
 @page {
 	size: A4 portrait;
 	margin: 1cm;
+
+	@top-right {
+		content: "dd/mm/yyyy";
+	}
 }
 
-.pagedjs_page {
-	--page-content-height: calc(var(--pagedjs-pagebox-height) - var(--pagedjs-margin-top) - var(--pagedjs-margin-bottom));
-	--page-content-width: calc(var(--pagedjs-pagebox-width) - var(--pagedjs-margin-left) - var(--pagedjs-margin-right));
-	--headline-height: calc(var(--page-content-height) * 0.1);
-	--page-split: calc(var(--page-content-width) * 0.3);
+@font-face {
+	font-family: "Jost";
+	font-style: normal;
+	src: url(/fonts/jost/Jost-VariableFont_wght.ttf) format("truetype");
 }
 
-.pagedjs_page .headline {
-	text-align: center;
-	margin: 1em 0;
+@font-face {
+	font-family: "Space Grotesk";
+	font-style: normal;
+	src: url(/fonts/space-grotesk/SpaceGrotesk-VariableFont_wght.ttf) format("truetype");
 }
 
-h1 {
-	font-size: 2.4em;
-}
-
-h2 {
-	font-size: 1.6em;
-}
-
-h3 {
-	font-size: 1.2em;
-}
-
-h4 {
-	font-size: 1em;
-}
-
-h5 {
-	font-size: 0.8em;
+* {
+	font-family: "Jost";
+	font-weight: 250;
+	font-size: 1rem;
 }
 
 h1, h2, h3 {
@@ -52,191 +42,141 @@ h5 {
 	font-weight: 400;
 }
 
-h1, h2, h3, h4, h5 {
-	margin: 0;
+h1 {
+	font-size: 2.4rem;
 }
 
-.pagedjs_page .base-container {
-	margin: 0;
-	margin-bottom: 2em;
-	font-family: "Jost";
-	font-weight: 250;
-	font-size: 1em;
+h2 {
+	font-size: 1.6rem;
 }
 
-.pagedjs_page .column {
+h3 {
+	font-size: 1.2rem;
+}
+
+h4 {
+	font-size: 1rem;
+}
+
+h5 {
+	font-size: 0.8rem;
+}
+
+.base-container {
+	margin-top: 0;
+	margin-bottom: 2rem;
+}
+
+.headline, .sub-container {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+
+.headline {
+	text-align: center;
+}
+
+.column__left, .column__right {
 	float: left;
 }
 
-.pagedjs_page .left {
+.column__left {
 	width: 30%;
 }
 
-.pagedjs_page .right {
-	position: relative;
+.column__right {
 	width: 68%;
 	margin-left: 2%;
 }
 
-.pagedjs_page .row::after {
-	content: '';
+.row::after {
+	content: "";
 	display: table;
 	clear: both;
 }
 
-.pagedjs_page .left ul {
-	padding-left: 2em;
+h1, h2, h3, h4, h5, p {
+	margin: 0;
 }
 
-.pagedjs_page .left .education li {
-	margin-bottom: 1em;
-}
-
-.education .time-span {
-	position: relative;
-}
-
-ul.icon--close > li, ul.icon--far > li {
-	position: relative;
+ul {
+	padding-left: 0;
 	list-style-type: none;
 }
 
-ul.icon--close > li::before, ul.icon--far > li::before {
-	content: '';
+ul > ul {
+	padding-left: 2rem;
+}
+
+li, .icon {
+	margin-left: 2rem;
+	position: relative;
+}
+
+li::before, .icon::before {
+	content: "";
 	position: absolute;
 	top: calc((1lh - 1rem) * 0.5);
+	left: -1.5rem;
 	display: inline-block;
 	width: 1rem;
 	height: 1rem;
-	background-image: url('/images/arrow.svg');
 	background-size: cover;
 }
 
-ul.icon--close > li::before {
-	left: -1.2rem;
+li::before, .icon--arrow::before {
+	background-image: url("/images/arrow.svg");
 }
 
-ul.icon--far > li::before {
-	left: -2rem;
+.icon--phone::before {
+	background-image: url("/images/phone.svg");
 }
 
-.pagedjs_page .projects .head {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	margin-top: 1em;
+.icon--email::before {
+	background-image: url("/images/mail.svg");
 }
 
-.right-align {
-	margin-right: 0;
-	margin-left: auto;
+.icon--github::before {
+	background-image: url("/images/github.svg");
+}
+
+.icon--address::before {
+	background-image: url("/images/location.svg");
+}
+
+.icon--calendar::before {
+	background-image: url("/images/calendar.svg");
+}
+
+.icon--prompt::before {
+	background-image: url("/images/prompt.svg");
+}
+
+.icon--team::before {
+	background-image: url("/images/team.svg");
+}
+
+.icon--time::before {
+	background-image: url("/images/time.svg");
 }
 
 .h5-wrapper {
 	height: 1lh;
+}
+
+.flex, .h5-wrapper {
 	display: flex;
 	align-items: center;
 }
 
-.icon--close, .icon--far {
-	position: relative;
+.align--right {
+	margin-right: 0;
+	margin-left: auto;
 }
 
-.icon--close::before, .icon--far::before {
-	content: '';
-	position: absolute;
-	top: calc((1lh - 1rem) * 0.5);
-	display: inline-block;
+.img42 {
+	position: relative;
 	width: 1rem;
 	height: 1rem;
-	background-size: cover;
-}
-
-.icon--close::before {
-	left: -1.2rem;
-}
-
-.icon--far::before {
-	left: -2rem;
-}
-
-ul > li.icon--phone::before {
-	background-image: url('/images/phone.svg');
-}
-
-ul > li.icon--email::before {
-	background-image: url('/images/mail.svg');
-}
-
-ul > li.icon--github::before {
-	background-image: url('/images/github.svg');
-}
-
-ul > li.icon--address::before {
-	background-image: url('/images/location.svg');
-}
-
-ul > li.icon--calendar::before {
-	background-image: url('/images/calendar.svg');
-}
-
-.icon--arrow::before {
-	background-image: url('/images/arrow.svg');
-}
-
-ul > li.icon--prompt::before {
-	background-image: url('/images/prompt.svg');
-}
-
-.icon--team::before {
-	background-image: url('/images/team.svg');
-}
-
-.icon--time::before {
-	background-image: url('/images/time.svg');
-}
-
-.projects .head .time {
-	margin-left: 2rem;
-}
-
-.projects .head .team {
-	margin-left: 2rem;
-}
-
-.pagedjs_page .projects .description {
-	margin-top: 0;
-}
-
-.right ul {
-	padding-left: 2em;
-}
-
-li {
-	position: relative;
-	list-style-type: none;
-}
-
-li::before {
-	content: '';
-	position: absolute;
 	top: calc((1lh - 1rem) * 0.5);
-	left: -1.2rem;
-	display: inline-block;
-	width: 1rem;
-	height: 1rem;
-	background-image: url('/images/arrow.svg');
-	background-size: cover;
-}
-
-@font-face {
-	font-family: "Jost";
-	font-style: normal;
-	src: url(/fonts/jost/Jost-VariableFont_wght.ttf) format("truetype");
-}
-
-@font-face {
-	font-family: "Space Grotesk";
-	font-style: normal;
-	src: url(/fonts/space-grotesk/SpaceGrotesk-VariableFont_wght.ttf) format("truetype");
 }
