@@ -3,54 +3,64 @@
 	<head>
 		<title>CV Creator</title>
 		<script src="./js/paged.polyfill.js"></script>
-		<link rel="stylesheet" href="./css/custom.css" type="text/css" />
+		<link rel="stylesheet" href="./css/common.css" type="text/css" />
+		<link rel="stylesheet" href="./css/resume.css" type="text/css" />
 		<link rel="stylesheet" href="./css/interface.css" type="text/css" />
 	</head>
 	<body>
-		<div class="headline">
+		<div class="container align--center">
 			<h1>Nils Ostermeier</h1>
 			<h2>Software Developer</h2>
 		</div>
-		<div class="base-container">
-			<p>I'm a
-			<img class="img42" src="images/42.svg" alt="42" />
+		<p>
+			I'm a
 			student with three years of experience in software development and problem solving.<br />
 			My experience includes working on a variety of different projects in C and C++,
 			developing and dockerizing a web app, writing both backend and frontend, and setting up
 			and working in different Linux environments.<br />
-			Furthermore I have expertise in peer reviews and learning.</p>
-		</div>
+			Furthermore I have expertise in peer reviews and learning.
+		</p>
 		<div class="row">
-		<div class="column__left">
-		<div class="base-container">
+		<div class="column column__left">
+		<div class="container--spacious">
 			<h3>contact</h3>
-			<ul>
+			<ul class="container">
 				<li class="icon--phone">+00 111 222 333</li>
 				<li class="icon--email">email@my.com</li>
 				<li class="icon--github">github.com/link</li>
 				<li class="icon--address">city, country</li>
 			</ul>
 		</div>
-		<div class="base-container">
+		<div class="container--spacious">
 			<h3>education</h3>
-			<ul>
-				<li class="sub-container icon--calendar">
-					<div class="h5-wrapper"><h5>2021 - Present</h5></div>
-					<h4>42 Wolfsburg</h4>
-					<p>Software Engineering</p>
-				</li>
-				<li class="sub-container icon--calendar">
-					<div class="h5-wrapper"><h5>2017 - 2019</h5></div>
-					<h4>Gymnasium Trittau</h4>
-					<p>Abitur</p>
-				</li>
-			</ul>
+			<div class="container">
+				<div class="h5-wrapper">
+					<h5 class="icon--before icon--calendar">
+						2021 - Present
+					</h5>
+				</div>
+				<p>
+					<img class="img42" src="images/42.svg" alt="42" />
+					Wolfsburg<br />
+					Software Engineering
+				</p>
+			</div>
+			<div class="container">
+				<div class="h5-wrapper">
+					<h5 class="icon--before icon--calendar">
+						2017 - 2019
+					</h5>
+				</div>
+				<p>
+					Gymnasium Trittau<br />
+					Abitur
+				</p>
+			</div>
 		</div>
-		<div class="base-container">
+		<div class="container--spacious">
 			<h3>skills</h3>
-			<ul>
-				<li>C</li>
-				<li>C++</li>
+			<ul class="container">
+				<li>C, C++</li>
 				<li class="icon--prompt">Linux, Bash</li>
 				<li>Git</li>
 				<li>Make</li>
@@ -58,30 +68,31 @@
 				<li>nginx</li>
 				<li>TypeScript</li>
 				<li>NestJS, Next.js, React</li>
+				<li>HTML, CSS</li>
 				<li>Assembly</li>
 			</ul>
 		</div>
-		<div class="base-container">
+		<div class="container--spacious">
 			<h3>languages</h3>
-			<ul>
+			<ul class="container">
 				<li>German - native</li>
 				<li>English - fluent</li>
 			</ul>
 		</div>
 		</div>
-		<div class="column__right">
-		<div class="base-container">
+		<div class="column column__right">
+		<div class="container--spacious">
 			<h3>projects</h3>
-			<div class="sub-container">
+			<div class="container">
 				<div class="flex">
 					<h4>ft_containers</h4>
 					<div class="h5-wrapper align--right">
-						<h5 class="icon icon--team">solo</h5>
-						<h5 class="icon icon--time">three months</h5>
+						<h5 class="icon--before icon--team">solo</h5>
+						<h5 class="icon--before icon--time">three months</h5>
 					</div>
 				</div>
 				<p>Implementing various C++98 standard library features related to containers</p>
-				<ul>
+				<ul class="container">
 					<li>developed small features
 					(enable_if, equal, pair, reverse_iterator, etc.)</li>
 					<li>recoded std::vector (without vector&lt;bool&gt; specification) and<br />
@@ -90,33 +101,33 @@
 					to implement my versions of std::map and std::set</li>
 				</ul>
 			</div>
-			<div class="sub-container">
+			<div class="container">
 				<div class="flex">
 					<h4>webserv</h4>
 					<div class="h5-wrapper align--right">
-						<h5 class="icon icon--team">team of two</h5>
-						<h5 class="icon icon--time">three months</h5>
+						<h5 class="icon--before icon--team">team of two</h5>
+						<h5 class="icon--before icon--time">three months</h5>
 					</div>
 				</div>
 				<p>Developing an HTTP webserver in C++98</p>
-				<ul>
+				<ul class="container">
 					<li>created asynchronous server structure</li>
 					<li>implemented HTTP/1.1 parser (to a certain extend as in RFC9110)</li>
 					<li>defined configuration file logic (oriented towards nginx)</li>
 					<li>handled uploads and CGI</li>
 				</ul>
 			</div>
-			<div class="sub-container">
+			<div class="container">
 				<div class="flex">
 					<h4>ft_transcendence</h4>
 					<div class="h5-wrapper align--right">
-						<h5 class="icon icon--team">team of four</h5>
-						<h5 class="icon icon--time">three months</h5>
+						<h5 class="icon--before icon--team">team of four</h5>
+						<h5 class="icon--before icon--time">three months</h5>
 					</div>
 				</div>
 				<p>Writing a full-stack web application in Typescript packaged in Docker with<br />
-				<p>built in multiplayer online game, real-time chat, user profiles and more</p>
-				<ul>
+				built in multiplayer online game, real-time chat, user profiles and more</p>
+				<ul class="container">
 					<li>set up docker-compose for development and production<br />
 					connecting multiple services (webserver [nginx], frontend [Next.js],
 					backend [NestJS], database [postgreSQL])</li>

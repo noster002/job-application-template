@@ -1,0 +1,77 @@
+.column {
+	float: left;
+}
+
+.column__left {
+	width: 30%;
+}
+
+.column__right {
+	width: 70%;
+}
+
+.row::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.column .container--spacious:first-child {
+	margin-top: 1rem;
+}
+
+li, .icon--before {
+	position: relative;
+	margin-left: 1.5rem;
+}
+
+.align--right .icon--before {
+	margin-left: 2rem;
+}
+
+li::before, .icon--before::before {
+	content: "";
+	position: absolute;
+	top: calc((1lh - 1rem) * 0.5);
+	left: -1.5rem;
+	display: inline-block;
+	width: 1rem;
+	height: 1rem;
+	background-size: cover;
+}
+
+li::before {
+	background-image: url("/images/arrow.svg");
+}
+
+.icon--phone::before {
+	background-image: url("/images/phone.svg");
+}
+
+.icon--email::before {
+	background-image: url("/images/mail.svg");
+}
+
+.icon--github::before {
+	background-image: url("/images/github.svg");
+}
+
+.icon--address::before {
+	background-image: url("/images/location.svg");
+}
+
+.icon--calendar::before {
+	background-image: url("/images/calendar.svg");
+}
+
+.icon--prompt::before {
+	background-image: url("/images/prompt.svg");
+}
+
+.icon--team::before {
+	background-image: url("/images/team.svg");
+}
+
+.icon--time::before {
+	background-image: url("/images/time.svg");
+}

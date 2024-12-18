@@ -1,0 +1,117 @@
+@page {
+	size: A4 portrait;
+	margin: 1cm;
+
+	@top-right {
+		content: "dd/mm/yyyy";
+	}
+}
+
+@font-face {
+	font-family: "Jost";
+	font-style: normal;
+	src: url(/fonts/jost/Jost-VariableFont_wght.ttf) format("truetype");
+}
+
+@font-face {
+	font-family: "Space Grotesk";
+	font-style: normal;
+	src: url(/fonts/space-grotesk/SpaceGrotesk-VariableFont_wght.ttf) format("truetype");
+}
+
+* {
+	font-family: "Jost";
+	font-weight: 250;
+	font-size: 1rem;
+}
+
+h1, h2, h3 {
+	font-family: "Space Grotesk";
+	color: grey;
+}
+
+h1, h3, h4 {
+	font-weight: 500;
+}
+
+h2 {
+	font-weight: 300;
+}
+
+h5 {
+	font-weight: 400;
+}
+
+h1 {
+	font-size: 2.4rem;
+}
+
+h2 {
+	font-size: 1.6rem;
+}
+
+h3 {
+	font-size: 1.2rem;
+}
+
+h4 {
+	font-size: 1rem;
+}
+
+h5 {
+	font-size: 0.8rem;
+}
+
+h3, .container {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+
+h1, h2, h4, h5, .container p {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.container--spacious {
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+}
+
+.container--spacious .container {
+	margin-left: 0.5rem;
+}
+
+ul {
+	padding-left: 0;
+	list-style-type: none;
+}
+
+ul > ul {
+	padding-left: 2rem;
+}
+
+.h5-wrapper {
+	height: 1lh;
+}
+
+.flex, .h5-wrapper {
+	display: flex;
+	align-items: center;
+}
+
+.align--center {
+	text-align: center;
+}
+
+.align--right {
+	margin-right: 0;
+	margin-left: auto;
+	text-align: right;
+}
+
+.img42 {
+	position: relative;
+	width: 1rem;
+	height: 1rem;
+	top: calc((1lh - 1rem) * 0.5);
+}

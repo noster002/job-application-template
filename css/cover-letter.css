@@ -1,0 +1,31 @@
+.icon--after {
+	margin-right: 2rem;
+	position: relative;
+}
+
+.icon--after::after {
+	content: "";
+	position: absolute;
+	top: calc((1lh - 1rem) * 0.5);
+	right: -1.5rem;
+	display: inline-block;
+	width: 1rem;
+	height: 1rem;
+	background-size: cover;
+}
+
+.icon--phone::after {
+	background-image: url("/images/phone.svg");
+}
+
+.icon--email::after {
+	background-image: url("/images/mail.svg");
+}
+
+.icon--github::after {
+	background-image: url("/images/github.svg");
+}
+
+.icon--address::after {
+	background-image: url("/images/location.svg");
+}
