@@ -1,5 +1,5 @@
-# CV-creator
-CV template with HTML and CSS
+# job application template
+HTML documents for the resume and cover letter with CSS styles
 
 ## resource
 [Pagedjs.org](https://pagedjs.org/)
